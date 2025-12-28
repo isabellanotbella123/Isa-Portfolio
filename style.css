@@ -99,6 +99,10 @@ padding-right : 70%;
 display: flex;
 gap: 12px;
 margin: 10px;
+  flex-wrap: wrap;  /* allows items to move to next line */
+  justify-content: center;  /* optional: center items */
+  gap: 1.5rem;  /* spacing between cards */
+  overflow-x: hidden;  
 }
 .one{
     flex: 1;
