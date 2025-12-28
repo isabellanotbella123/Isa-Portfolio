@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabella-portfolio</title>
+    <link rel="stylesheet" href="./Index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+   <header>
+      <ul>
+    <li class="right"><a href="#Isabella">Isabella</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Works</a></li>
+    <li><a href="#contact">Contact</a></li>
+   </ul>
+   </header>
+    
+  <section id="Isabella">
+       <div class="pic"><img class="pics" src="./Images/Isa.jpg" alt=""></div>
+        <div class="word">
+          <h2>Hi there, I'm Isabella</h2>  
+          A web developer building clean, responsive web experiences.
+        <!-- <span>HTML • CSS • JavaScript</span> -->
+    </div>
+        </section>
+    
+         <h3>About me</h3>
+    <section id="about">
+       
+        <div class="unos">
+            <h4>What i am</h4>
+         A frontend developer focused on building
+     clean, <br> thoughtful interfaces. I enjoy turning designs <br> 
+     into simple, functional websites and I’m <br>currently
+     growing my skills through <br>  real-world projects.
+        </div>
+
+        <div class="unos">
+            <h4>What i love</h4>
+            creativity, writing, coding and learn new things. <br>
+            Ive always been into discovering new <br> thing and picking up new insterest,<br> always been a quick learner and <br> is easgoing.
+        </div>
+
+     <div class="unos">
+        <h4>I'm skilled in</h4>
+        Html, css, UX/UX, JavaScript, Github, Git. <br>
+        Ever learning and pursing, my knowlegde of <br> coding increasing by the day.
+
+     </div>
+
+    </section>
+      
+    <h3>My works</h3>
+    <section id="work">
+        <div class="one">
+          <h4> Generated Ticket </h4> <br>
+            <img src="./Images/Generated-tickets.jpg" alt=""><br>
+            <!-- <span> Generates tickets without hassle </span> -->
+            <button><a href="https://github.com/isabellanotbella123/fishi.git">View on Github</a></button>
+
+           
+        </div>
+        <div class="one">
+             <h4>News-Homepage </h4><br>
+            <img src="./Images/news-hompage.jpg" alt=""><br>
+            <!-- <span> News Homepage to entertain and inform </span> -->
+             <button><a href=https://github.com/isabellanotbella123/News-homapage.git>View on Github</a> </button>
+        </div>
+          <div class="one">
+           <h4> Ecommerce page</h4><br>
+            <img src="./Images/UI_UX.png" alt=""><br>
+            <!-- <span>Ecommerce page on a watch</span>  <br> -->
+             <button>Made with Figma</button>
+        </div>
+          <div class="one">
+          <h4> Web page  </h4><br>
+            <img src="./Images/UI_UX(2).png" alt=""><br>
+             <!-- <span>  Web page on an designing application</span>  <br> -->
+              <button>Made with Figma</button>
+        </div>
+    </section>
+
+    <footer>
+          <h3>Contact Me</h3>
+       <section id="contact">   
+        <div class="wor">
+       Want to work together? <br>
+     <span> Email:</span>  isabellandubuisi5@email.com <br>
+     <span> Github:</span> isabellanotbella123 <br>
+    <span> Instagram:</span> isabella627026 <br>
+        </div>
+        <div class="form">
+            <form action="https://formspree.io/f/manopyjz" method="post">
+                    <label>
+    Your name:
+    <input type="text" name="name">
+  </label> <br>
+          <label>
+    Your email:
+    <input type="email" name="email">
+  </label> <br>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    </footer>
+  <script>
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value
+  };
+
+  try {
+    const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      alert('Message sent!');
+      form.reset();
+    } else {
+      alert('Error sending message.');
+    }
+  } catch (error) {
+    alert('Error: ' + error);
+  }
+});
+</script>
+</body>
+</html>
